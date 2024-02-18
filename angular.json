@@ -61,7 +61,13 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -103,6 +109,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "firestarter-demo:build:production",
+              "serveTarget": "firestarter-demo:serve:production"
+            },
+            "development": {
+              "buildTarget": "firestarter-demo:build:development",
+              "serveTarget": "firestarter-demo:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

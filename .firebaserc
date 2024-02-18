@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kanban-b74eb": {
+      "hosting": {
+        "firestarter-demo": [
+          "kanban-b74eb"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kanban-b74eb"
+  }
+}
